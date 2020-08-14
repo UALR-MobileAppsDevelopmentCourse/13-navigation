@@ -21,6 +21,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // TODO 04. Create a new instance of the FragmentStateAdapter class created and plug it into the viewpager
+
+        // TODO 08. We can listen for events from the view pager using the OnPageChangeCallback interface
+        // NOTE: It's not mandatory to override all the methods of the interface
+
+        // TODO 09. Callback interface for responding to changing state of the selected page.
+        /**
+         * This method will be invoked when the current page is scrolled, either as part of a
+         * programmatically initiated smooth scroll or a user initiated touch scroll.
+         */
+
+        // TODO 10. Method invoked when a new page becomes selected
+        // TODO 11. Method invoked when the scroll state changes.
+        /**
+         *  1-> SCROLL_STATE_DRAGGING. Indicates that the pager is currently being dragged by the user.
+         *  0-> SCROLL_STATE_IDLE. Indicates that the pager is in an idle, settled state.
+         *      The current page is fully in view and no animation is in progress.
+         *  2-> SCROLL_STATE_SETTLING. Indicates that the pager is in the process of settling to a final position
+         */
     }
 
     // TODO 03. Define a new FragmentStateAdapter class that will manage the visualization of the proper fragment
