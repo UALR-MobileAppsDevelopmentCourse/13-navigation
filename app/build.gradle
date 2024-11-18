@@ -1,27 +1,27 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 32
+    namespace 'edu.ualr.navigation'
+    compileSdkVersion 33
     defaultConfig {
         applicationId "edu.ualr.navigation"
         minSdkVersion 23
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
-    buildFeatures {
-        viewBinding true
-    }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    namespace 'edu.ualr.navigation'
+    // Ensure proper JVM settings for compatibility with Gradle and Kotlin
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -33,5 +33,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     // TODO 01. Add viewpager library
-    implementation 'androidx.viewpager2:viewpager2:1.0.0'
 }
