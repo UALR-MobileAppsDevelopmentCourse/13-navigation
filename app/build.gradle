@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    // Enable View Binding
+    viewBinding {
+        enabled = true
+    }
+
     // Ensure proper JVM settings for compatibility with Gradle and Kotlin
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
